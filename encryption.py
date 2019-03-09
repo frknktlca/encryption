@@ -1,13 +1,14 @@
-#encoder
-#crypte all vowel and reverse sentence
+
+#encryption all vowel and reverse the sentence
 
 print("""
 ****************************************
-Encryption Algorithm v1.0
+Encryption Algorithm v1.1
 ****************************************
 
 1- Encryption **************************
-2- Quit ********************************
+2- Decoded *****************************
+3- Quit ********************************
 
 ****************************************
 """)
@@ -23,7 +24,7 @@ while True:
         c=b.replace("e", "'")
         d=c.replace("ı", "^")
         e=d.replace("i", "+")
-        f=e.replace("o", "%")
+        f=e.replace("o", "/")
         g=f.replace("ö", "&")
         h=g.replace("u", "=")
         i=h.replace("ü", "?")
@@ -32,6 +33,22 @@ while True:
         print("****************************************")
 
     elif x == "2":
+
+        a = input("Write the Sentence for Decode: ")
+        b = a.replace("!", "a")
+        c = b.replace("'", "e")
+        d = c.replace("^", "ı")
+        e = d.replace("+", "i")
+        f = e.replace("/", "o")
+        g = f.replace("&", "ö")
+        h = g.replace("=", "u")
+        i = h.replace("?", "ü")
+        j = i.replace("02%", " ")
+        print("Decoded Sentence: ", j[::-1])
+        print("****************************************")
+
+
+    elif x == "3":
         break
 
     else:
